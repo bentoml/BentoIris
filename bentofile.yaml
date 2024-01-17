@@ -5,6 +5,4 @@ labels:
 include:
   - "*.py"
 python:
-  packages:
-    - scikit-learn
-    - pandas
+  requirements_txt: "./requirements.txt"
