@@ -1,4 +1,4 @@
-This document demonstrates how to build an Iris classification application using BentoML, powered by scikit-learn.
+This document demonstrates how to build an Iris classification application with Scikit-Learn using BentoML.
 
 ## **Prerequisites**
 
@@ -17,7 +17,7 @@ pip install -r requirements.txt
 Run the following script to train a Iris classification model.
 
 ```bash
-python model.py
+python prepare_model.py
 ```
 
 View the model in the Model Store.
@@ -34,9 +34,7 @@ iris_sklearn:brxxjgvvowt5masc                                                   
 We have defined a BentoML Service in `service.py`. Run `bentoml serve` in your project directory to start the Service.
 
 ```python
-$ bentoml serve .
-
-<fillin>
+bentoml serve .
 ```
 
 The server is now active at [http://0.0.0.0:3000](http://0.0.0.0:3000/). You can interact with it using Swagger UI or in other different ways:
@@ -53,6 +51,12 @@ curl -X 'POST' \
     [5, 3, 2, 4]
   ]
 }'
+```
+
+Python:
+
+```bash
+python client.py
 ```
 
 ## Deploy the application to BentoCloud
